@@ -358,15 +358,15 @@
 
 // }
 // console.log(fibo)
-function removeDuplicate(arr){
-    let unique=[];
-    for(let i=0; i<arr.length; i++)
-    { element=arr[i];
-        if(unique.includes(element)==false)
-        unique.push(element)
+// function removeDuplicate(arr){
+//     let unique=[];
+//     for(let i=0; i<arr.length; i++)
+//     { element=arr[i];
+//         if(unique.includes(element)==false)
+//         unique.push(element)
       
-    }
-    return unique
-}
-let arr=[1,1,2,3,3,4,4,5,5,6,6,7,7,8,89,9,9,];
-console.log(removeDuplicate(arr))
+//     }
+//     return unique
+// }
+// let arr=[1,1,2,3,3,4,4,5,5,6,6,7,7,8,89,9,9,];
+// console.log(removeDuplicate(arr))
