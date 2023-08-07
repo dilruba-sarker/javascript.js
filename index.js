@@ -1,40 +1,27 @@
- function woodCalculator(ChQ,TaQ,BeQ){
-
-    if(typeof ChQ  !=="number" && TaQ  !=="number" && BeQ !=="number"){
-        return "provide a valid number"
-    }
+function findingBadDate(arr){
+if(!Array.isArray===true){return 'please provide a valid array'}
+else{
+    let count=0;
     
-const perChairWood=3;
-const perTableWood= 2;
-const perBedWood= 50;
-
-let totalWoodOfChaiR=perChairWood*ChQ;
-let totalWoodOfTable=perTableWood*TaQ;
-let totalWoodOfBed= perBedWood*BeQ;
-let totalWood= totalWoodOfChaiR+totalWoodOfTable+totalWoodOfBed
-return totalWood;
+    for(let i=0;i<arr.length;i++){
+        let element=arr[i];
+        if(typeof element !=="number"){
+            return "give me valid number"
+        }
+        else{
+            if(element<0){
+            count++;
+                
+                
+               
+            }
+        }
     }
 
- 
- console.log(woodCalculator( 'st',3,5))
-// const phone=[
-//     {nmae:"Samsung",camera:12, Storage: " 32 gb", price:20000},
-//     {nmae:"oppo",camera:12, Storage: " 32 gb", price:10000},
-//     {nmae:"nokya",camera:12, Storage: " 32 gb", price:30000},
-//     {nmae:"miximus",camera:12, Storage: " 32 gb", price:2000}
-// ]
-
-// function cheppistPhone( phone){
+    return  "total BadDate : " + count
+}
     
-// if(!Array.isArray(phone)){return "provide valid arry"}
-// // else
+}
 
-//     let cheppist=phone[0];
-//     for(let i=0;i<phone.length;i++){
-//         const element=phone[i];
-//         if(element.price<cheppist.price){
-//             cheppist = element
-//         }
-//     } return cheppist }
-   
-// console.log(cheppistPhone( phone))
+let array=[1,2,3,4,-3,-5,-7,-88,9,-1]
+    console.log( findingBadDate(array) )
