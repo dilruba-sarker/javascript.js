@@ -28,7 +28,8 @@
 //     } else if (arr[0] === arr[1]) {
 //         return "equal";
 //     } else if ( arr[0]>0 && arr[1]>0) {
-//         return arr.sort((a, b) => b - a);
+//         // return arr.sort((a, b) => b - a);
+//         return [ [arr[1],arr[0]]]
 //     } else {
 //         return arr;
 //     }
@@ -42,20 +43,64 @@
 
 // // ----------- problem 4
 
-function findAddress(obj) {
+// function findAddress(obj) {
 
-    const street=obj.street || "__";
-    const house=obj. house || "__";
-    const society=obj.society || "__";
-    return `${street},${house},${society}`;
-}
+//     const street=obj.street || "__";
+//     const house=obj. house || "__";
+//     const society=obj.society || "__";
+//     return street + ","+ house + "," + society;
+// }
 
-
-const obj={
+// const obj={
     
-  
-    society: "Earth Perfect"
-        
+//     society: "Earth Perfect" 
+// }
+
+// console.log(findAddress(obj));
+
+
+// 5problem----------------
+
+function canPay(changeArray, totalDue) {
+    if(changeArray.length===0){
+        return " please provide a valid input"; 
+    }else{
+
+let sum=0
+for(let i=0;i<changeArray.length;i++)  {
+   sum=sum+changeArray[i]
+
+
+}      
+
+if(sum>=totalDue){
+    return true
+}
+else{return false}
 }
 
-console.log(findAddress(obj));
+
+
+}
+
+
+
+const changeArray=[1,4,1];
+const  totalDue =10;
+console.log( canPay(changeArray, totalDue));
+
+
+// 2 problem..............
+
+// function matchFinder(string1, string2) {
+//     if(typeof string1 !=="string" || typeof string2 !== "string"){
+//         return" please provide a valid input"
+//     }
+//     if(string1.includes(string2)){return true}
+//     else{return false}
+// }
+
+// const string1="Javascript "
+// const string2=  123;
+
+// console.log(matchFinder(string1, string2));
