@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="original-price">Price: $1000</h1>
+<h2>Discount 30%</h2>
+<p id="discounted-price"></p>
+<button id="btn">Apply</button>
+
+<script>
+    document.getElementById('btn').addEventListener('click', function () {
+        const originalPriceElement = document.getElementById('original-price');
+        const discountedPriceElement = document.getElementById('discounted-price');
+
+        const originalPrice = 1000;
+        const discount = originalPrice * 0.30;
+
+        const totalPrice = originalPrice - discount;
+        discountedPriceElement.innerText = `Discounted Price: $${totalPrice}`;
+    });
+</script>
+</body>
+</html>

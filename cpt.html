@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Example</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <div class="products">
+        <div class="product">
+            <h2>Product 1</h2>
+            <p>Price: $10.00</p>
+            <button class="add-to-cart" data-product="Product 1" data-price="10.00">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Product 2</h2>
+            <p>Price: $15.00</p>
+            <button class="add-to-cart" data-product="Product 2" data-price="15.00">Add to Cart</button>
+        </div>
+        <!-- Add more products here -->
+    </div>
+
+    <h1>Cart</h1>
+    <div class="cart">
+        <ul class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </div>
+
+    <script src="shopping.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="original-price">Price: $1000</h1>
+<h2>Discount 30%</h2>
+<p id="discounted-price"></p>
+<input type="text" id="promo-code" placeholder="Enter Promo Code">
+<button id="apply-btn">Apply</button>
+
+<script>
+    document.getElementById('apply-btn').addEventListener('click', function () {
+        const originalPriceElement = document.getElementById('original-price');
+        const discountedPriceElement = document.getElementById('discounted-price');
+        const promoCodeInput = document.getElementById('promo-code');
+
+        const originalPrice = 1000;
+        const promoCode = 'DIS30';
+        const discountRate = 0.30;
+
+        const enteredPromoCode = promoCodeInput.value;
+
+        if (enteredPromoCode === promoCode) {
+            const discount = originalPrice * discountRate;
+            console.log(discount );
+            // const totalPrice = originalPrice - discount;
+            // discountedPriceElement.innerText = `Discounted Price: $${totalPrice}`;
+        } else {
+            discountedPriceElement.innerText = "Invalid promo code.";
+        }
+    });
+</script>
+
+</body>
+ </html> -->
+ document.getElementById("applyButton").addEventListener('click', function() {
+  const promoCodeInput = document.getElementById("couponCode"); // Changed ID to "couponCode"
+  const promoCode = promoCodeInput.value.trim().toUpperCase();
+
+  if (promoCode === "SELL200" && total >= 200) {
+      const discountPercentage = 0.2;
+      const discountAmount = total * discountPercentage;
+
+      const discountDisplay = document.getElementById("discount");
+      discountDisplay.innerText = discountAmount.toFixed(2);
+
+      const totalPayment = total - discountAmount;
+      const totalPaymentDisplay = document.getElementById("total-payment");
+      totalPaymentDisplay.innerText = totalPayment.toFixed(2);
+
+      const purchaseButton = document.getElementById("purchase");
+      purchaseButton.disabled = false;
+  } else {
+      alert("Invalid promo code or order total does not meet requirements.");
+  }
+});
+
+   
+   
+     
